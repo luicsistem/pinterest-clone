@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* -------- HEADER---------- */
+header {
+    box-shadow: 0px 10px 14px -12px rgba(0,0,0,0.75);
+    position: fixed;
+    top: 0;
+    margin: 0;
+    width: 100vw;
+    background-color: #fff;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+}
+.btn-options .home {
+    background-color: #000;
+    color: #fff;
+
+}
+.btn-options .today:hover,
+.btn-options .followers:hover {
+    background-color: #efefef;
+}
+ .btn-options a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  padding: 12px;
+  margin-right: 5px;
+  border-radius: 20px;
+ }
+
+.search {
+    width: 50%;
+}
+.search input {
+    width: 90%;
+    border: none;
+    border-radius: 25px;
+    padding: 1rem;
+    margin-left: 10px;
+    background-color: #efefef;
+    
+}
+
+.search   input:focus {
+    border: 3px solid  rgb(95, 131, 160);
+    outline: none;
+}
+.fa-search {
+    color: #767676;
+}
+.icon-options a {
+    padding: 12px;
+    border-radius: 100%;
+}
+.icon-options a:hover,
+.icon-options .user {
+    background-color: #efefef;
+}
+.icon-options a i {
+    color: #767676;
+    font-size: 1.2rem;
+}
+
+
+/* -----------------SECTION IMAGES-------------------- */
+.container {
+
+    margin: auto 40px;
+    margin-top: 100px;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    gap: 20px;
+    justify-content: center;
+}
+.item {
+    border-radius: 15px;
+    overflow: hidden;
+    align-items: stretch;
+    position: relative;
+    cursor: zoom-in;
+  
+}
+
+/* --IMAGES-- */
+ .item img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    
+   
+
+}
+.item {
+    width: 100%;
+}
+
+
+.cover {
+
+    background: rgba(0,0,0,0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   opacity: 0;  
+    transition: all .3s ease-in;
+   
+}
+
+.cover:hover{
+    opacity: 1;
+}
+.cover a {
+    text-decoration: none;
+    color: #111;
+}
+/* -- SAVE --  */
+.save {
+  padding: 30px;
+}
+.save a {
+    color: #fff;
+    background-color: #f00;
+    padding: 12px;
+    border-radius: 20px;
+}
+
+.save a:hover {
+    background: rgb(230, 42, 64);
+}
+
+/* -- ICONS -- */
+.options-cover {
+    display: flex;
+    align-items: flex-end;
+   
+  
+   padding: 20px;
+  
+}
+
+.options-cover a {
+ 
+    padding: 10px;
+    background-color: #efefef;
+    margin: 0 10px;
+    border-radius: 100%;
+
+}
+
+.options-cover a:hover {
+    background-color: #fff;
+}
+
+.options-cover a:nth-of-type(1)  {
+    margin-left: 5px;
+}
+
+.level-1 {
+    grid-row-end: span 3;
+}
+
+.level-2 {
+    grid-row-end: span 2;
+    
+}
+.level-3 {
+    grid-row-end: span 1;
+
+}
+
+/* -- QUERIES-- */
+
+@media (max-width:1024px) {
+   .btn-options {
+       display: none;     
+    
+   }
+   
+}
+@media (max-width:568px) {
+    .search {
+        width: 70%;
+    }
+  .icon-options {
+      display: none;
+  }
+  .search span i {
+      display: none;
+  }
+}
